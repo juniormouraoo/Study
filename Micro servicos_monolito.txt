@@ -1,0 +1,23 @@
+Micro serviços são arquiteturas que estruturam uma aplicação como uma coleção de serviços que são fáceis de aplicar manutenções e testes, pouco acoplada, possui deploy independente e é organizada por capacidade de negócios.
+Micro serviços possuem algumas desvantagens que devem ser analisadas ao usá-lo.
+A linguagem padrão de micro serviços tem dois objetivos:
+- Auxilia a escolha se micro serviços é uma boa escolha para sua aplicação;
+- A linguagem auxilia a usar a arquitetura de micro serviços com sucesso.
+
+Arquitetura Monólito
+
+A arquitetura monólito é aplicada formando vários módulos que são compilados separadamente, nela cada componente do S.O. está contido no núcleo do sistema, isso facilita o desenvolvimento, testes, implantação e escalabilidade de uma aplicação.
+Ela facilita muito os pontos acima quando é uma aplicação pequena e o time também é pequeno.
+Quando a aplicação e times começam a crescer alguns problemas surgem:
+- Uma grande arquitetura  monolitica é dificil de entender e modificar, com isso a qualidade dos códigos tendem a diminuir.
+- IDE sobrecarregada, trazendo lentidão e menor produtividade dos desenvolvedores
+- Quanto maior a aplicação, mais tempo leva para iniciá-la, impactando desenvolvimento e implantação.
+- Dificuldade de deploy continuo, para atualizar uma componente é necessário reimplantar toda aplicação, indiferente se será impactado pela mudança ou não. Isso pode causar muitos problemas e assim o deploy frequente fica mais difícil de ser realizado.
+- A escalabilidade é difícil já que não é possivel fazer com um componente independente. A aplicação nao consegue escalabilidade com o crescimento de dados. Cada cópia da aplicação acessará todos os dados, consumindo mais memória e fazendo o cache ser menos efetivo.
+- Não é possível separar as equipes conforme elas vão crescendo, já que o desenvolvimento e implantação tem que estar de acordo com todos os times.
+- É necessário utilizar a mesma tecnologia escolhida no começo, inpedindo a adoção de novas tecnologias do mercado e em alguns casos fazendo com que seja necessário a reescrita de toda aplicação para a adoção de uma nova tecnologia.
+
+Arquitetura Micro serviços
+
+Para aplicações maiores a arquitetura de micro serviços atende o que a monolitica tem dificuldade, pois cada componente é individual (inclusive o banco de dados) e possui sua independencia, com isso é mais simples para novos integrantes do time entenderem e começarem a ser produtivos, por serem individuais e menores é mais fácil testar e implantar, sem dependencias de outros times. Os times por sua vez serão menores e mais eficazes.
+O desvantagem é a necessidade de implementar um mecanismo de comunicação entre os serviços. Por serem muitos serviços independentes testar as interações entre os serviços é mais difícil, bem como implementar solicitações que abrangem muitos serviços. Outro problema é que as IDEs/developer tools são orientadas ao desenvolvimento de arquitetura monolítica.

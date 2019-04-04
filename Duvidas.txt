@@ -1,0 +1,7 @@
+Dúvidas:
+
+- Acoplamento
+- capacidade de negócio
+- Java WAR file
+- directory hierarchy of Rails or NodeJS code
+- hard module boundaries
